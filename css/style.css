@@ -1,0 +1,444 @@
+/* =HTML & BODY
+----------------------------------------------- */
+
+html {
+	background: #ffffff url('../img/linen.png') repeat-x fixed bottom;
+	color: #666666;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8125em; /* 13px / 16px */
+	font-weight: 400;
+}
+
+/* =HEADINGS
+----------------------------------------------- */
+
+/* =TYPOGRAPHY
+----------------------------------------------- */
+
+p {
+	margin-bottom: 10px;
+}
+
+/* =LINKS
+----------------------------------------------- */
+
+a, a:visited {
+	color: #666666;
+	cursor: pointer;
+	text-decoration: none;
+}
+ 
+a:hover { 
+	color: #666666;
+}
+
+/* =FIGURES
+----------------------------------------------- */
+
+/* =TABLES
+----------------------------------------------- */
+
+/* =FORMS
+----------------------------------------------- */
+
+/* =HEADER
+----------------------------------------------- */
+
+header {
+	text-align: center;	
+}
+
+#logo {
+	background: url("../img/logo.png") no-repeat center center;
+	display: block;
+	height: 64px;
+	margin: 20px auto 15px auto;
+	width: 200px;
+}
+
+
+/* =NAVIGATION
+----------------------------------------------- */
+
+nav {
+	font-size: 1.076923em; /* 14px / 13px */
+	font-weight: 300;
+	line-height: 3em;
+	margin-bottom: 10px;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+nav > ul {
+	list-style-type: none;
+}
+
+nav > ul > li {
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	margin: 0px 15px;
+	position: relative;
+}
+
+nav > ul > li > a, nav > ul > li > a:visited {
+	cursor: pointer;
+	padding: 10px 15px;
+}
+
+nav > ul > li:hover > a, nav > ul > li:hover > a:visited {
+	color: #000000;
+}
+
+/* Sub Nav */
+
+nav .sub {
+	-webkit-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	-moz-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	background-color: #f7f7f7;
+	display: none;
+	list-style-type: none;
+	position: absolute;
+}
+
+nav li:hover .sub {
+	display: block;
+	z-index: 1000;
+}
+
+nav .sub li {
+	cursor: pointer;
+	display: block;
+	line-height: 2.4em;
+	text-align: left;
+}
+
+nav .sub li:hover {
+	background-color: #e5e5e5;
+}
+
+nav .sub a, nav .sub a:visited {
+	cursor: pointer;
+	display: block;
+	padding: 0px 25px 0px 15px;
+}
+
+/* =CONTENT
+----------------------------------------------- */
+
+/* Gallery */
+
+#gallery {
+	-webkit-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	-moz-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+	margin: 0px 20px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	position: relative;
+}
+
+.oldie #gallery {
+	border: 1px solid #888888;
+}
+
+#gallery > div {
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+}
+
+	/* Change these widths whenever adding or removing an img - take the width when the img has height of 600px, add 2px margin for each */
+	
+	/* #gallery - Babies */
+	#gallery.babies > div {
+		width: 11674px;
+	}
+	
+	/* #gallery - Families */
+	#gallery.families > div {
+		width: 42668px;
+	}
+
+	/* #gallery - Film */
+	#gallery.film > div {
+		width: 17194px;
+	}
+
+	/* #gallery - Index (Home) */
+	#gallery.home > div {
+		width: 48139px;
+	}
+
+	/* #gallery - Kids */
+	#gallery.kids > div {
+		width: 30034px;
+	}
+	
+	/* #gallery - Portraits */
+	#gallery.portraits > div {
+		width: 30020px;
+	}
+
+	/* #gallery - Weddings */
+	#gallery.weddings > div {
+		width: 51959px;
+	}
+
+#gallery img {
+	float: left;
+	margin-left: 2px;
+	max-height: 600px;
+}
+
+#gallery img:first-child {
+	margin-left: 0px;
+}
+
+/* Business Card Styling */
+
+.card {
+	-webkit-box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	-moz-box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #e5e5e5;
+	border: 10px solid #ffffff;
+	font-size: 1.230769em; /* 16px / 13px */
+	line-height: 1.5em; /* 24px / 16px */
+	overflow: hidden;
+	padding: 36px 30px 40px 30px;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+.card h1, .card h2 {
+	color: #808080;
+	font-size: 1.875em; /* 30px / 16px */
+	font-weight: 700;
+	line-height: 1.2em; /* 36px / 30px */
+	margin-bottom: 0.4em; /* 12px / 30px */
+}
+
+.card span {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.card a {
+	display: block;
+	margin-bottom: 3px;
+}
+
+/* =FOOTER
+----------------------------------------------- */
+
+footer {
+	font-size: 0.8076923em; /* 10.5px / 13px */
+	line-height: 6em;
+	position: absolute;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	text-align: center;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+/* =PAGE - ABOUT
+----------------------------------------------- */
+
+#about {
+	background: #b1bca2 url('../img/linen-green.png') repeat left top;
+	padding: 30px 20px;
+}
+
+#about > div {
+	margin: 0px auto;
+	position: relative;
+	max-width: 700px;
+}
+
+div#about:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*#about .card {
+	height: 320px;
+}*/
+
+#about h1 {
+	color: #ffffff;
+	display: none;
+	font-size: 2.307692em; /* 30px / 13px */
+	font-weight: 700;
+	line-height: 1.2em; /* 36px / 30px */
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#about img {
+	-webkit-box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	-moz-box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	box-shadow : 0px 3px 8px rgba(0,0,0,.5);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #e5e5e5;
+	border: 10px solid #ffffff;
+	float: left;
+	margin-right: 20px;
+	max-width: 100%;
+}
+
+/* =PAGE - CONTACT
+----------------------------------------------- */
+
+#contact {
+	background: #b1bca2 url('../img/linen-green.png') repeat left top;
+	padding: 30px 20px;
+}
+
+#contact .card {
+	margin: 0px auto;
+	width: 480px;
+}
+
+#contact .card h2 {
+	margin-bottom: 0.2em; /* 6px / 30px */
+}
+
+/* =PAGE - 404
+----------------------------------------------- */
+
+#error {
+	background: #b1bca2 url('../img/linen-green.png') repeat left top;
+	padding: 30px 20px;
+}
+
+#error > div {
+	margin: 0px auto;
+	position: relative;
+	max-width: 700px;
+}
+
+div#error:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* =VENDOR SPECIFIC
+----------------------------------------------- */
+
+/* =MODERNIZR
+----------------------------------------------- */
+
+/* =MEDIA QUERIES
+----------------------------------------------- */
+
+/* Styling for 1024px and narrower and 820px and shorter on both desktop and device */
+@media all and (max-device-width: 1024px), all and (max-width: 1024px), all and (max-height: 820px) {
+
+	nav > ul > li {
+		margin: 0px;	
+	}
+
+	#gallery {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		margin: 0px auto;
+		max-width: 550px;
+		padding: 0px 20px;
+		overflow: hidden;
+	}
+	
+	/* Whenever adding a portfolio page be sure to add the class here as well! */
+	#gallery > div,
+	#gallery.home > div,
+	#gallery.portraits > div,
+	#gallery.families > div,
+	#gallery.kids > div,
+	#gallery.babies > div,
+	#gallery.weddings > div,
+	#gallery.film > div {
+		-webkit-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+		-moz-box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+		box-shadow : 0px 0px 5px rgba(0,0,0,.5);
+		width: auto;
+	}
+	
+	#gallery img {
+		display: block;
+		float: none;
+		margin: 0px 0px 2px 0px;
+		max-height: none;
+		max-width: 100%;
+	}
+	
+	footer {
+		position: static;
+	}
+	
+}
+
+/* Styling for 768px and narrower on both desktop and device */
+@media all and (max-device-width: 768px), all and (max-width: 768px) {
+
+	#about img {
+		display: block;
+		float: none;
+		margin: 0px auto 20px auto;
+	}
+
+	#about h1 {
+		display: block;
+	}
+
+	#about .card {
+		height: auto;
+	}
+
+	#about .card h2 {
+		display: none;
+	}
+
+}
+
+/* Styling for 480px and narrower on both desktop and device */
+@media all and (max-device-width: 480px), all and (max-width: 480px) {
+
+	nav > ul > li:first-child {
+		display: none;
+	}
+	
+	#gallery {
+		max-width: none;
+	}
+	
+	#gallery img {
+		width: 100%;
+	}
+	
+	#contact,
+	#about {
+		padding: 20px;
+	}
+	
+	.card,
+	#about .card,
+	#contact .card {
+		font-size: 1.076923em; /* 14px / 13px */
+		height: auto;
+		padding: 30px 20px;
+		width: auto;
+	}
+	
+}
