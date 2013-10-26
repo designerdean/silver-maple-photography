@@ -1,4 +1,4 @@
-silver-maple-photography
+Silver Maple Photography
 ========================
 
 SilverMaplePhotography.com website
