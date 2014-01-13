@@ -1,0 +1,110 @@
+// @font-face & Font Stacks
+// ==========================================================================
+
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+// Font Name
+
+@include font-face("Font Name",
+  font-files(
+    "FontName.ttf",
+    "FontName.woff",
+    "FontName.svg"),
+    "FontName.eot"
+);
+
+// Font Stacks
+
+%font-base {font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400;}
+%font-base-bold {@extend %font-base; font-weight: 700;}
+// %font-alt {font-family: Helvetica, Arial, sans-serif;}
+// %font-alt-bold {@extend %font-alt; font-weight: bold;}
+
+// Global Font
+// ==========================================================================
+
+html {
+  font-size: 100%; // Change this if you want your root font-size bigger/smaller
+}
+
+body {
+  @extend %font-base;
+  color: $color-base;
+  font-size: 1.1em;
+  line-height: 1.6; // Set global line-height here
+  -webkit-font-smoothing: subpixel-antialiased; // Fixes the inconsistent font-weight in Safari
+  text-shadow: 0 0.1em 0 #ffffff;
+}
+
+// Icon Font
+// ==========================================================================
+
+@include font-face("Icomoon",
+  font-files(
+    "Icomoon.ttf",
+    "Icomoon.woff",
+    "Icomoon.svg"
+  ),
+  "Icomoon.eot"
+);
+
+// Use the following CSS code if you want to use data attributes for inserting your icons
+[data-icon]:before {
+  content: attr(data-icon);
+  font-family: 'Icomoon';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Vertical Margin Extends
+// ==========================================================================
+
+$margin-fallback: 16px; // IE8 fallback
+$margin: 1rem; // 16px
+
+$margin-medium-fallback: $margin-fallback*2; // IE fallback
+$margin-medium: $margin*2;
+
+$margin-large-fallback: $margin-fallback*3; // IE fallback
+$margin-large: $margin*3;
+
+// Bottom
+
+%margin-bottom {
+  margin-bottom: $margin-fallback;
+  margin-bottom: $margin;
+}
+
+// Headings
+// ==========================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %margin-bottom;
+  color: #808080;
+  font-size: 1.875em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+
+// Misc
+// ==========================================================================
+
+p {
+  @extend %margin-bottom;
+}
+
+ul, ol {
+  @extend %margin-bottom;
+}
+
+blockquote {
+
+}

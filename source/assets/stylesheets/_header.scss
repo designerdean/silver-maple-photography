@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  height: image-height('no-svg/logo.png');
+  margin: 1.5em auto 1.2em auto;
+  width: image-width('no-svg/logo.png');
+  .no-svg & {
+    background: image-url("no-svg/logo.png") no-repeat center center;
+  }
+  > img {
+    .no-svg & {
+      display: none;
+    }
+  }
+  @include until-vertical(51em) {
+    margin-top: 1.1em;
+    margin-bottom: 0.2em;
+  }
+  @include until(40em) {
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+  }
+}

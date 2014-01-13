@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>      <html class="no-js old-ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= page_title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
+  </head>
+
+  <body>
+    <!--[if lt IE 8]>
+      <p class="ancient">You are using an outdated browser. <a href="http://browsehappy.com/" target="_blank">Upgrade your browser today</a> to better experience this site.</p>
+    <![endif]-->
+
+    <%= partial 'header' %>
+
+    <div id="main" class="main" role="main">
+      <%= yield %>
+    </div>
+
+    <%= partial 'footer' %>
+
+    <%= javascript_include_tag 'application' %>
+
+    <%= partial 'analytics' %>
+
+  </body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+// Apply box-sizing: border-box to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+  background: #ffffff image-url("linen.png") repeat-x fixed bottom;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// Main
+// ==========================================================================
+
+.main {
+  margin: 0 auto;
+}
+
+// Content
+// ==========================================================================
+
+$content-width: 45em; // Change your main area width here
+
+.content {
+  @extend %clear-after;
+  background: $color-green image-url("linen-green.png") repeat left top;
+  padding: 2.5em;
+  @include until(goldilocks) {
+    padding: 2.2em 1.8em;
+  }
+  @include until(baby-bear) {
+    padding: 1.2em 1em;
+  }
+}
+
+  .content > div {
+    margin: 0 auto;
+    max-width: $content-width;
+  }
+
+// IE8 Min-Width
+// ==========================================================================
+
+.old-ie {
+  body {
+    overflow-x: auto;
+  }
+  // .main {
+  //   min-width: $main-width;
+  // }
+}

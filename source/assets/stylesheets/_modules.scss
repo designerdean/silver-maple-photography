@@ -1,0 +1,173 @@
+// Gallery
+// ==========================================================================
+
+.gallery {
+  @extend %box-shadow;
+  margin: 0 1em 1em 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  .no-boxshadow & {
+    border: 1px solid #888888;
+  }
+  @include until(55em) {
+    @include box-shadow(none);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 33em;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1.2em;
+  }
+}
+
+  .gallery > div {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    @include until(55em) {
+      @include box-shadow(0 0 0.4em rgba(#000000, 0.5)); // Sass won't nest @extends
+      width: auto;
+    }
+  }
+
+    .gallery img {
+      margin-bottom: -0.4em;
+      margin-left: 0.2em;
+      max-height: 34em;
+      &:first-child {
+        margin-left: 0;
+      }
+      @include until(55em) {
+        display: block;
+        float: none;
+        margin: 0;
+        max-height: none;
+        max-width: 100%;
+      }
+    }
+
+// Card
+// ==========================================================================
+
+.card {
+  @extend %box-shadow;
+  background-color: #e5e5e5;
+  border: 0.7em solid #ffffff;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 30em;
+  overflow: hidden;
+  padding: 1.5em 1.7em 2em 1.7em;
+  @include until(mama-bear) {
+    font-size: 0.9em;
+  }
+  @include until(50em) {
+    padding: 1.2em 1.5em 1.7em 1.5em;
+  }
+  @include until(baby-bear) {
+    font-size: 0.8em;
+  }
+}
+
+  .card-title {
+    
+  }
+
+  .card-list {
+    margin-bottom: 0;
+  }
+
+    .card-list > li {
+      margin-bottom: 0.5em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+      .card-list > li > a {
+        @include until(40em) {
+          display: block;
+        }
+      }
+
+  .card p:last-of-type {
+    margin-bottom: 0;
+  }
+
+// Card - Image
+// ==========================================================================
+
+.card-image {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 2em;
+  max-width: 100%;
+  @include until(40em) {
+    float: none;
+    margin: 0 auto 1em auto;
+  }
+}
+
+  .card-image > img {
+    @extend %box-shadow;
+    border: 0.7em solid #ffffff;
+    display: block;
+    @include until(40em) {
+      display: block;
+      float: none;
+      margin-right: auto;
+      margin-left: auto;
+      width: auto;
+    }
+  }
+
+  .card-image + .card {
+    max-width: none;
+  }
+
+// Horizontal Rules
+// ==========================================================================
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+// Google Maps
+// ==========================================================================
+
+// Don't reset the *:before & *:after
+
+.map * {
+  @extend %default-box-model;
+  & img {max-width: none;}
+}
+
+// Ancient Browser Alert
+// ==========================================================================
+
+.ancient {
+  background: $color-base;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  margin: 0;
+  padding: 0.5em 1em;
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  text-align: center;
+  z-index: 1000000;
+}
+
+.ancient a,
+.ancient a:visited {
+  color: #ffffff;
+  text-decoration: underline;
+}

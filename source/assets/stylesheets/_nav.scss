@@ -1,0 +1,90 @@
+.nav {
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: lowercase;
+  @include until-vertical(51em) {
+    margin-bottom: 0.7em;
+  }
+  @include until(55em) {
+    margin-bottom: 0;
+  }
+  @include until(goldilocks) {
+    font-size: 0.9em;
+  }
+  @include until(baby-bear) {
+    font-size: 0.8em;
+  }
+}
+
+// Main Nav
+// ==========================================================================
+
+.nav-main {
+  margin-bottom: 0;
+}
+
+.nav-main > li {
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  &:first-child {
+    @include until(baby-bear) {
+      display: none;
+    }
+  }
+}
+
+  .nav-main-link {
+    @include transition(color 0.2s ease-in-out);
+    cursor: pointer;
+    padding: 0.8em 1.8em;
+    @include until(55em) {
+      padding: 0.5em 0.9em;
+    }
+  }
+
+    .nav-main > li:hover {
+
+    }
+
+    .nav-main > li:hover > a {
+      color: #000000;
+    }
+
+// Sub Nav
+// ==========================================================================
+
+.nav-sub {
+  @extend %box-shadow;
+  background-color: #f7f7f7;
+  display: none;
+  margin-bottom: 0;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+  .nav li:hover .nav-sub {
+    display: block;
+  }
+
+  .nav-sub > li {
+    @include transition(background-color 0.2s ease-in-out);
+    cursor: pointer;
+    display: block;
+    line-height: 2.4em;
+    text-align: left;
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+
+    .nav-sub a {
+      cursor: pointer;
+      display: block;
+      padding: 0 2.5em 0 1em;
+    }
