@@ -30,6 +30,7 @@ $content-width: 45em; // Change your main area width here
 .content {
   @extend %clear-after;
   background: $color-green image-url("linen-green.png") repeat left top;
+  margin-bottom: 1em;
   padding: 2.5em;
   @include until(goldilocks) {
     padding: 2.2em 1.8em;
