@@ -7,6 +7,7 @@ Dotenv.load
 ###
 
 config[:site_name] = ''
+config[:google_analytics] = 'UA-47061190-1'
 
 ###
 # Debugging
@@ -70,6 +71,8 @@ set :partials_dir, 'partials'
 # page "/path/to/file.html", :layout => false
 #
 # With alternative layout
+#
+# Separate home page layout: 
 # page '/', layout: :home
 #
 # A path which all have the same layout
@@ -105,6 +108,8 @@ set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
+
+activate :autoprefixer
 
 # ready do
 #   sprockets.append_path '/source/assets/pdfs'

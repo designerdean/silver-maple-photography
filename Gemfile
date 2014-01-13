@@ -9,6 +9,7 @@ gem 'jquery-middleman'
 gem 'middleman-livereload', '~> 3.1.0'
 gem 'middleman-s3_sync'
 gem 'middleman-cloudfront'
+gem 'middleman-autoprefixer'
 gem 'dotenv'
 
 group :development do
