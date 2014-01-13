@@ -69,14 +69,13 @@
 }
 
 %default-box-model {
-  @include box-sizing(content-box);
+  box-sizing: content-box;
 }
 
 // Fix Weirdness During CSS Transitions
 %fix-transition-bugs {
-  @include backface-visibility(hidden); // Fixes flickering of objects during CSS transitions
-  @include rotate3d(0, 0, 0, 0); // Fixes font-weight shifting during CSS transitions
-  @include translate3d(0, 0, 0, 0);
+  backface-visibility: hidden; // Fixes flickering of objects during CSS transitions
+  transform: rotate3d(0,0,0,0); // Fixes font-weight shifting during CSS transitions
 }
 
 .visually-hidden {
@@ -91,7 +90,7 @@
 }
 
 %box-shadow {
-  @include box-shadow(0 0 0.4em rgba(#000000, 0.5));
+  box-shadow: 0 0 0.4em rgba(#000000, 0.5);
 }
 
 // Sass Variables

@@ -39,9 +39,9 @@
 }
 
   .nav-main-link {
-    @include transition(color 0.2s ease-in-out);
     cursor: pointer;
     padding: 0.8em 1.8em;
+    transition: color 0.2s ease-in-out;
     @include until(55em) {
       padding: 0.5em 0.9em;
     }
@@ -73,11 +73,11 @@
   }
 
   .nav-sub > li {
-    @include transition(background-color 0.2s ease-in-out);
     cursor: pointer;
     display: block;
     line-height: 2.4em;
     text-align: left;
+    transition: background-color 0.2s ease-in-out;
     &:hover {
       background-color: #e5e5e5;
     }
