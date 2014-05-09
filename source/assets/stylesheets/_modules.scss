@@ -100,27 +100,18 @@
 // ==========================================================================
 
 .card-image {
-  float: left;
-  margin-right: 1.5em;
-  margin-bottom: 2em;
+  display: block;
+  margin: 0 auto 2em;
   max-width: 100%;
-  @include until(40em) {
-    float: none;
-    margin: 0 auto 1em auto;
+  text-align: center;
+  @include until(baby-bear) {
+    margin-bottom: 1em;
   }
 }
 
   .card-image > img {
     @extend %box-shadow;
     border: 0.7em solid #ffffff;
-    display: block;
-    @include until(40em) {
-      display: block;
-      float: none;
-      margin-right: auto;
-      margin-left: auto;
-      width: auto;
-    }
   }
 
   .card-image + .card {
