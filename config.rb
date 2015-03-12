@@ -6,7 +6,7 @@ Dotenv.load
 # Site Settings
 ###
 
-config[:site_name] = ''
+config[:site_name] = 'Silver Maple Photography'
 config[:google_analytics] = 'UA-47061190-1'
 
 ###
